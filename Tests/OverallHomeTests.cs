@@ -8,7 +8,7 @@ using Pages;
 
 namespace Tests
 {
-    public class LastSessionTests
+    public class OverallHomeTests
     {
         IWebDriver driver = new Driver().init(Browser.Chrome);
 
@@ -18,6 +18,8 @@ namespace Tests
             driver.Navigate().GoToUrl("https://overbuff.com/");
             OverbuffHome homePage = new OverbuffHome(driver);
             homePage.FindPlayer("Katalysm#1137");
+            ProfileOverall profileOverall = new ProfileOverall(driver);
+            profileOverall.Goto();
         }
 
         [TearDown]
@@ -30,7 +32,7 @@ namespace Tests
         [Test]
         public void Test1()
         {
-            
+            Assert.IsTrue(true);
         }
     }
 }

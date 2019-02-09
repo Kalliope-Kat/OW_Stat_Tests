@@ -23,7 +23,6 @@ namespace Pages
             playerField.SendKeys(blizzardID);
             var submitButton = driver.FindElement(By.XPath(".//button"));
             submitButton.Click();
-            Thread.Sleep(10000);
         }
     }
 }
